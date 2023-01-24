@@ -1,4 +1,6 @@
 # Taek`s Portfolio Page.
-### 프로젝트 기간
+### Duration
+
 ### Tech stack
+
 #### code convention
