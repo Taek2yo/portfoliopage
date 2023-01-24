@@ -1,10 +1,9 @@
 import React from "react";
-import Header from "../componenets/Header";
-
+import About from "../componenets/About";
 const Mainpage = () =>{
     return (
-    <>  
-    <Header/>
+    <>
+    <About/>
     </>)
 }
 
