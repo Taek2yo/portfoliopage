@@ -1,15 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import bear from "../assets/img/bear.jpg";
-const About = () => {
+function About (){
   return (
     <Container>
-      <Wrap>
+      <ImgWrap>
+      <ProfileImg />
+      </ImgWrap>
+      <ContentWrap>
         <Introduce>Welcome.</Introduce>
         <Motto>" Slow and Steady Win the race "</Motto>
-        <Desc>천천히 하지만 꾸준히 정진하는 Front-end 개발자 강민택입니다.</Desc>
-      </Wrap>
-      <ProfileImg />
+        <Desc>천천히 하지만 꾸준히 정진하는 프론트엔드 개발자 강민택입니다.</Desc>
+      </ContentWrap>
     </Container>
   );
 };
@@ -18,21 +20,27 @@ export default About;
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 4rem;
   position  : absolute;
-  top: 50%;
-  left: 35%;
+  top: 38%;
+  left: 30%;
   width: 60vw;
   height: 300px;
   margin: -160px 0px 0px -200px;
-  align-items: center;
   box-sizing: border-box;
+  /* background-color: white; */
 `;
 
-const Wrap = styled.div`
-  flex-direction: column;
+const ImgWrap = styled.div`
+  margin-top: -30px;
+  padding-bottom: 15vh;
+`
+
+const ContentWrap = styled.div`
   border-left: 3px solid white;
   padding-left: 20px;
+  margin-left: 40px;
 `;
 
 const Introduce = styled.div`
@@ -63,4 +71,7 @@ const ProfileImg = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  float: right;
+  margin-right: 30px;
 `;

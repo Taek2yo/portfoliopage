@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import Header from "./componenets/Header";
+import Header from "./components/Header";
 import styled from "styled-components";
 import bg from "./assets/img/bg.jpg";
-import About from "./componenets/About";
+import Contents from "./components/Contents";
 
 function App() {
+  const [change, setChange] = useState('');
+  
   return (
     <WrapAll>
-      <Header />
-      <About/>
+      <Header setChange={setChange}/>
+      <Contents change={change}/>
     </WrapAll>
   );
 }
