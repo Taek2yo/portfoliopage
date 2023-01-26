@@ -1,15 +1,15 @@
 import React from "react";
 import "./App.css";
-import Router from "./shared/Router";
 import Header from "./componenets/Header";
 import styled from "styled-components";
 import bg from "./assets/img/bg.jpg";
+import About from "./componenets/About";
 
 function App() {
   return (
     <WrapAll>
       <Header />
-      <Router />
+      <About/>
     </WrapAll>
   );
 }
