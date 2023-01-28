@@ -26,7 +26,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   color: wheat;
-  /* background-color: white; */
 `;
 
 const Content = styled.div`

@@ -9,7 +9,6 @@ function About (){
       </ImgWrap>
       <ContentWrap>
         <Introduce>Welcome.</Introduce>
-        <Motto>" Slow and Steady Win the race "</Motto>
         <Desc>천천히 하지만 꾸준히 정진하는 프론트엔드 개발자 강민택입니다.</Desc>
       </ContentWrap>
     </Container>
@@ -47,12 +46,6 @@ const Introduce = styled.div`
   margin-top: -30px;
   color: wheat;
   font-size: 80px;
-`;
-
-const Motto = styled.div`
-  color: wheat;
-  font-size: 50px;
-  margin-top: 15px;
 `;
 
 const Desc = styled.div`
