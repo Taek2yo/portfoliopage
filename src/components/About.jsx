@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import bear from "../assets/img/bear.jpg";
+import astrocat from "../assets/img/astrocat.gif";
 function About (){
   return (
     <Container>
@@ -8,7 +8,7 @@ function About (){
       <ProfileImg />
       </ImgWrap>
       <ContentWrap>
-        <Introduce>Welcome.</Introduce>
+        <Introduce>안녕하세요.</Introduce>
         <Desc>천천히 하지만 꾸준히 정진하는 프론트엔드 개발자 강민택입니다.</Desc>
       </ContentWrap>
     </Container>
@@ -43,9 +43,9 @@ const ContentWrap = styled.div`
 `;
 
 const Introduce = styled.div`
-  margin-top: -30px;
+  margin-top: -15px;
   color: wheat;
-  font-size: 80px;
+  font-size: 60px;
 `;
 
 const Desc = styled.div`
@@ -59,8 +59,8 @@ const ProfileImg = styled.div`
   height: 200px;
   border: none;
   border-radius: 50%;
-  box-shadow: 2px 2px 4px 3px #4B4A54;
-  background-image: url(${bear});
+  /* box-shadow: 2px 2px 4px 3px #4B4A54; */
+  background-image: url(${astrocat});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
