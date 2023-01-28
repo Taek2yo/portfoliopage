@@ -3,28 +3,24 @@ import styled from "styled-components";
 import astrocat from "../assets/img/astrocat.gif";
 function Intro() {
   return (
-    <Wrap>
+    <Container>
       <Img />
       <Motto>" Slow and Steady Win the race "</Motto>
-    </Wrap>
+    </Container>
   );
 }
 
 export default Intro;
 
-const Wrap = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   align-items: center;
-
   background-color: #030303;
-  width: 100%;
 `;
 
 const Img = styled.div`
