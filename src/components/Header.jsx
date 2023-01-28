@@ -7,7 +7,7 @@ function Header(props){
       <Container>
         <Content onClick={()=>{props.setChange('about')}}>ABOUT</Content>
         <Content onClick={()=>{props.setChange('skills')}}>SKILLS</Content>
-        <Title onClick={()=>{props.setChange('')}}>MINTAEK</Title>
+        <Title onClick={()=>{props.setChange('')}}>Mt`s Portfolio</Title>
         <Content onClick={()=>{props.setChange('project')}}>PROJECT</Content>
         <Content onClick={()=>{props.setChange('contact')}}>CONTACT</Content>
       </Container>
@@ -38,6 +38,6 @@ const Content = styled.div`
 
 const Title = styled.div`
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     cursor: pointer;
 `;
