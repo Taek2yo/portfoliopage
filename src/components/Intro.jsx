@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import astrocat from "../assets/img/astrocat.gif";
-function Intro() {
+
+function Intro(props) {
   return (
     <Container>
-      <Img />
-      <Motto>" Slow and Steady Win the race "</Motto>
+      <Title>Welcome to my space.</Title>
+      <Btn onClick={()=>{props.change.setChange('about')}}>Go space</Btn>
     </Container>
   );
 }
@@ -20,20 +20,23 @@ const Container = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;
-  background-color: #030303;
+  gap: 20px;
+ /*  background-color: #030303; */
 `;
 
-const Img = styled.div`
-  width: 300px;
-  height: 200px;
-  background-image: url(${astrocat});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; ;
-`;
+const Title = styled.div`
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+`
 
-const Motto = styled.div`
-  color: wheat;
-  font-weight: bolder;
-  font-size: 3rem;
-`;
+const Btn = styled.div`
+  border: 1px solid white;
+  border-radius: 15px;
+  text-align: center;
+  width: 100px;
+  cursor: pointer;
+  :hover{
+    background-color: white;
+  }
+`

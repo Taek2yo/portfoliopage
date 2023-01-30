@@ -7,7 +7,7 @@ import Contact from './Contact'
 
 function Content (props) {
     if (props.change === ''){
-        return <Intro/>
+        return <Intro change = {props}/>
     } else if (props.change === 'about'){
         return <About/>
     } else if (props.change === 'skills'){

@@ -11,7 +11,7 @@ function App() {
   return (
     <WrapAll>
       <Header setChange={setChange} />
-      <Contents change={change} />
+      <Contents change={change} setChange={setChange}/>
     </WrapAll>
   );
 }

@@ -7,7 +7,7 @@ function Header(props){
       <Container>
         <Content onClick={()=>{props.setChange('about')}}>ABOUT</Content>
         <Content onClick={()=>{props.setChange('skills')}}>SKILLS</Content>
-        <Title onClick={()=>{props.setChange('')}}>Mt`s Portfolio</Title>
+        <Title onClick={()=>{props.setChange('')}}>Mt`s Space</Title>
         <Content onClick={()=>{props.setChange('project')}}>PROJECT</Content>
         <Content onClick={()=>{props.setChange('contact')}}>CONTACT</Content>
       </Container>
