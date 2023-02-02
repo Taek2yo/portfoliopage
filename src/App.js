@@ -1,31 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import Router from "./shared/Router";
 import "./App.css";
-import Header from "./components/Header";
 import styled from "styled-components";
-import bg from "./assets/img/bg.jpg";
-import Contents from "./components/Contents";
 
 function App() {
-  const [change, setChange] = useState("");
-
   return (
-    <WrapAll>
-      <Header setChange={setChange} />
-      <Contents change={change} setChange={setChange}/>
-    </WrapAll>
+    <>
+      <Router />
+    </>
   );
 }
 
 export default App;
 
 const WrapAll = styled.div`
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-    url(${bg});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 
-  position: relative;
 `;

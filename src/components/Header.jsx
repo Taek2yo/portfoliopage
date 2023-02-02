@@ -1,17 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-
-function Header(props){
+import { useNavigate } from "react-router";
+function Header(){
+  const navigate = useNavigate();
   return (
-    <>
       <Container>
-        <Content onClick={()=>{props.setChange('about')}}>ABOUT</Content>
-        <Content onClick={()=>{props.setChange('skills')}}>SKILLS</Content>
-        <Title onClick={()=>{props.setChange('')}}>Mt`s Space</Title>
-        <Content onClick={()=>{props.setChange('project')}}>PROJECT</Content>
-        <Content onClick={()=>{props.setChange('contact')}}>CONTACT</Content>
+        <Title onClick={()=>{navigate('/')}}>MinTaek .</Title>
+        <Content onClick={()=>{navigate('/about')}} >ABOUT</Content>
+        <Content onClick={()=>{navigate('/skills')}}>SKILLS</Content>
+        <Content onClick={()=>{navigate('/project')}}>PROJECT</Content>
+        <Content onClick={()=>{navigate('/contact')}}>CONTACT</Content>
       </Container>
-    </>
   );
 };
 
@@ -19,25 +18,20 @@ export default Header;
 
 const Container = styled.div`
   width: 100%;
-  height: 12vh;
+  height: 8vh;
   display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
+  text-align: center;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  color: wheat;
-`;
+  background-color: grey;
+`
 
 const Content = styled.div`
-    font-size: 20px;
-    cursor: pointer;
-    :hover{
-      color:  white;
-    }
-`;
+  cursor: pointer;
+`
 
 const Title = styled.div`
-    font-weight: bold;
-    font-size: 40px;
-    cursor: pointer;
-`;
+  font-size: 1.7rem;
+  color: white;
+  cursor: pointer;
+`

@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import astrocat from "../assets/img/astrocat.gif";
+
 function About() {
   return (
     <Container>
       <ImgWrap>
         <Title>About Me..</Title>
-        <ProfileImg />
       </ImgWrap>
       <ContentWrap>
         <Motto>" Slow and Steady Win the race "</Motto>
@@ -45,19 +44,6 @@ const Title = styled.div`
   font-size: 50px;
   font-weight: bold;
 `
-
-const ProfileImg = styled.div`
-  width: 200px;
-  height: 200px;
-  border: none;
-  border-radius: 50%;
-  box-shadow: 2px 2px 5px 4px #4B4A54;
-  background-image: url(${astrocat});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-`;
-
 
 const ContentWrap = styled.div`
   border-left: 3px solid white;

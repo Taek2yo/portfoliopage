@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import Header from "./Header";
 function Skills() {
   return (
-    <Container>
+    <Container> 
       <Circle>
         <Title>Front-End</Title>
       </Circle>
@@ -51,6 +52,7 @@ const Circle = styled.div`
   cursor: pointer;
   :hover {
   }
+  animation: 120s linear 0s infinite normal none running gvCQql;
 `;
 
 const Title = styled.div`
