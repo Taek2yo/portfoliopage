@@ -20,16 +20,11 @@ function About() {
 export default About;
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  position: absolute;
-  top: 38%;
-  left: 30%;
-  width: 60vw;
-  height: 300px;
-  margin: -160px 0px 0px -200px;
-  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
 `;
 
 const ImgWrap = styled.div`

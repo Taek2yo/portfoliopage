@@ -6,16 +6,18 @@ import astrocat from "../assets/img/astrocat.gif";
 function Intro() {
   
   return (
+  <>
     <Background>
       <Container>
       <ProfileImg />
         <Greet>
-          Hi! I'm Taek
+          Hi! I'm TAEK
           <br /> Front-end developer
         </Greet>
       </Container>
      {/*  <Copy>© 2023. Kang min taek.<br/> all right reserved.</Copy> */}
     </Background>
+  </>
   );
 }
 
@@ -28,13 +30,14 @@ const Background = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
+  margin: 0;
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 40%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;

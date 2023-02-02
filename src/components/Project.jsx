@@ -12,7 +12,11 @@ function Project() {
 export default Project;
 
 const Container = styled.div`
- 
+ background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
 `;
 
 const Box = styled.div`

@@ -28,14 +28,11 @@ function Contact() {
 export default Contact;
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  align-items: center;
-  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
 `;
 
 const Title = styled.div`
