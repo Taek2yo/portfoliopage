@@ -9,7 +9,7 @@ import Header from "../components/Header";
 function Router() {
   return (
     <BrowserRouter>
-    <Header/>
+    {/* <Header/> */}
       <Routes>
         <Route path="/" exact element={<Intro />} />
         <Route path="/about" exact element={<About />} />

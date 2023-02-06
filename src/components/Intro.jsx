@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import bg from "../assets/img/bg.jpg";
+import bg2 from "../assets/img/bg2.jpg";
 import astrocat from "../assets/img/astrocat.gif";
+import Header from "./Header";
 
 function Intro() {
-  
   return (
   <>
     <Background>
+    <Header />
       <Container>
       <ProfileImg />
         <Greet>
@@ -25,12 +26,12 @@ export default Intro;
 
 const Background = styled.div`
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(${bg});
+    url(${bg2});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  margin: 0;
+  position: relative;
 `;
 
 const Container = styled.div`
@@ -64,4 +65,7 @@ const ProfileImg = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  position: relative;
+  z-index: -1;
 `;

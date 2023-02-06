@@ -4,6 +4,7 @@ import Header from "./Header";
 function Skills() {
   return (
     <Container> 
+      <Header/>
       <Circle>
         <Title>Front-End</Title>
       </Circle>

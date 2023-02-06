@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-
+import Header from "./Header";
 function About() {
   return (
     <Container>
+      <Header/>
       <ImgWrap>
         <Title>About Me..</Title>
       </ImgWrap>
@@ -24,7 +25,7 @@ const Container = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  margin: 0;
+  
 `;
 
 const ImgWrap = styled.div`
@@ -35,7 +36,6 @@ const ImgWrap = styled.div`
 `;
 
 const Title = styled.div`
-  color: white;
   font-size: 50px;
   font-weight: bold;
 `

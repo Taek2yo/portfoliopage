@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-
+import Header from "./Header";
 function Project() {
   return (
     <Container>
+      <Header/>
       <Box></Box>
     </Container>
   );

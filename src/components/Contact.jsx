@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import Header from "./Header";
+import bg from "../assets/img/purplespace.jpg"
 function Contact() {
   return (
     <Container>
+      <Header/>
       <Title>
         Contact Me.
       </Title>
@@ -28,11 +31,13 @@ function Contact() {
 export default Contact;
 
 const Container = styled.div`
+  background-image: url(${bg});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
   margin: 0;
+  position: relative;
 `;
 
 const Title = styled.div`
