@@ -2,15 +2,24 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router";
 import menu from "../assets/img/menu.png"
+import Sidebar from "./Sidebar";
 function Header(){
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen)
+  const toggleMenu = () =>{
+    setIsOpen(isOpen => !isOpen)
+  }
   return(
+  <>
     <Container>
         <Title onClick={()=>{navigate('/')}} >
             M I N T A E K .
         </Title>
-        <Menu/>
+        <Menu onClick={()=>{toggleMenu()}}/>
     </Container>
+    {isOpen ? <Sidebar toggleMenu={toggleMenu}/> : null}
+  </>
   )
 }
 
@@ -40,4 +49,5 @@ const Menu = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   margin: 1.875rem;
+  cursor: pointer;
 `
