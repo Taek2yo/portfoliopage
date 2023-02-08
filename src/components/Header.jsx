@@ -6,7 +6,6 @@ import Sidebar from "./Sidebar";
 function Header(){
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen)
   const toggleMenu = () =>{
     setIsOpen(isOpen => !isOpen)
   }

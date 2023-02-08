@@ -9,14 +9,14 @@ function Intro() {
   <>
     <Background>
     <Header />
-      <Container>
+      <Container className="container">
       <ProfileImg />
         <Greet>
           Hi! I'm TAEK
           <br /> Front-end developer
         </Greet>
       </Container>
-     {/*  <Copy>© 2023. Kang min taek.<br/> all right reserved.</Copy> */}
+      <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
     </Background>
   </>
   );
@@ -43,21 +43,38 @@ const Container = styled.div`
   transform: translate(-50%, -50%);
   align-items: center;
   gap: 20px;
+  padding-top: 100px;
+  @media screen and (max-width: 498px){
+    .container{
+      padding-top: 150px;
+      position: relative;
+      z-index: 0;
+      display: none;
+    }
+  }
 `;
 
 const Greet = styled.h1`
   color: white;
   font-size: 4rem;
   font-weight: bold;
+  @media screen and (max-width: 375px){
+    font-size: 2rem;
+  }
 `;
 
 const Copy = styled.div`
-  color: white;
+  color: gray;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  padding: 15px;
 `
 
 const ProfileImg = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border: none;
   border-radius: 50%;
   box-shadow: 2px 2px 5px 4px #4B4A54;
@@ -65,7 +82,6 @@ const ProfileImg = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
   position: relative;
   z-index: -1;
 `;
