@@ -11,7 +11,7 @@ function Sidebar(props){
     return(
         <Container>
 
-        <div style={{padding:"40px 70px 60px"}}>
+        <Wrap>
             <Close onClick={()=>{props.toggleMenu()}}></Close>
             <Wrapper>
                 <Menu><span onClick={()=>{navigate("/")}}>HOME</span></Menu>
@@ -27,7 +27,7 @@ function Sidebar(props){
                 </Icon>
                 <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
             </div>
-        </div>
+        </Wrap>
         </Container>
     )
 }
@@ -43,8 +43,8 @@ const Container = styled.div`
     top: 0;
     right: 0;
     bottom: 0;
-    @media screen and (max-width: 760px){
-        width: 50vw;
+    @media screen and (max-width: 768px){
+        width: 70%
     }
 `
 
@@ -56,8 +56,17 @@ const Close = styled.div`
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    :hover{
+          opacity: 0.5;
+    }
 `
-
+const Wrap = styled.div`
+    padding: 40px 70px 60px;
+    @media screen and (max-width: 768px){
+        width: 50%;
+        padding: 20px 35px 30px;
+    }
+`
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -91,6 +100,9 @@ const Icon = styled.div`
         width: 3rem;
         border-radius: 100%;
         cursor: pointer;
+        :hover{
+          opacity: 0.5;
+        }
     }
 `
 

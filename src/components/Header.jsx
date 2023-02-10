@@ -38,6 +38,9 @@ const Title = styled.div`
   font-weight: bold;
   margin: 1.875rem;
   cursor: pointer;
+  @media screen and (max-width: 760px){
+        width: 100vw;
+    }
 `
 
 const Menu = styled.div`
@@ -49,4 +52,7 @@ const Menu = styled.div`
   background-position: center;
   margin: 1.875rem;
   cursor: pointer;
+  :hover{
+    opacity: 0.5;
+  }
 `
