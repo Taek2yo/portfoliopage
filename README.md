@@ -3,4 +3,3 @@
 
 ### Tech stack
 
-#### code convention
