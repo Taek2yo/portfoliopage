@@ -75,6 +75,24 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+  cursor: pointer;
+  @keyframes post-ani {
+    25% {
+        transform: rotate(2deg) scale(1.01);
+    }
+ 
+    50% {
+        transform: rotate(0deg) scale(1);
+    }
+ 
+    75% {
+        transform: rotate(-2deg) scale(1.01);
+    }
+}
+  :hover{
+    opacity: 0.9;
+	  animation: post-ani 0.8s linear 1;
+  }
   @media screen and (max-width: 667px) {
     flex-direction: column;
     width: 300px;
