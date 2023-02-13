@@ -22,7 +22,7 @@ function About() {
               <span>Slow and Steady Wins the Race</span>
               <div className="separator"></div>
               <p>
-                기존에 없었던 새로운 목표에 대한 도전을 즐기며, 또한 그 목표를 
+                새로운 목표에 대한 도전을 즐기며, 또한 그 목표를 
                 천천히, 꾸준히 계속해서 하는 것이 가장 빠른 길이라고 생각합니다.
               </p>
             </Content>
@@ -52,6 +52,7 @@ export default About;
 const Background = styled.div`
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(124, 118, 118, 0.151)),url(${bg3});
   background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
@@ -78,6 +79,7 @@ const Content = styled.div`
     margin: 20px auto;
   }
   p{
+    margin: 20px;
     font-size: 1.2rem;
   }
 `;
@@ -107,6 +109,7 @@ const Img = styled.div`
 const Container = styled.div`
   position: absolute;
   display: flex;
+  justify-content: space-between;
   width: 70%;
   gap: 25px;
   left: 50%;
@@ -140,6 +143,7 @@ const Content2 = styled.div`
     margin: 20px auto;
   }
   p{
+    margin: 20px;
     font-size: 1.2rem;
   }
 `;

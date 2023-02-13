@@ -57,7 +57,7 @@ const Close = styled.div`
     background-position: center;
     cursor: pointer;
     :hover{
-          opacity: 0.5;
+        opacity: 0.5;
     }
 `
 const Wrap = styled.div`
