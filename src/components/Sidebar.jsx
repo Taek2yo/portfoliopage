@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import styled from "styled-components";
+import styled, { keyframes,css } from "styled-components";
 import Xbtn from "../assets/img/x-button.png"
 import velog from "../assets/img/velog.png"
 import github from "../assets/img/github.png"
@@ -9,8 +9,7 @@ function Sidebar(props){
     const url2 = 'https://velog.io/@taek2yo'
     const navigate = useNavigate();
     return(
-        <Container>
-
+        <Container /*  disappear={!props.toggleMenu()} */>
         <Wrap>
             <Close onClick={()=>{props.toggleMenu()}}></Close>
             <Wrapper>
@@ -34,6 +33,22 @@ function Sidebar(props){
 
 export default Sidebar;
 
+const slideOpen = keyframes`
+    from{
+        transform: translateX(34.725rem);
+    }
+    to{
+        transform: translateX(0px);
+    }
+`
+const slideClose = keyframes`
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(34.725rem);
+    }
+`
 const Container = styled.div`
     width: 34.725rem;
     height: 100%;
@@ -46,6 +61,15 @@ const Container = styled.div`
     @media screen and (max-width: 768px){
         width: 70%
     }
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-name: ${slideOpen};
+    ${props =>
+    props.disappear &&
+    css`
+      animation-name: ${slideClose};
+    `}
+    animation-fill-mode: forwards;
 `
 
 const Close = styled.div`
@@ -87,6 +111,7 @@ const Menu = styled.div`
         color: #1A39AA;
         }
     }
+    transition: all 0.8s ease-out;
 `
 
 const Icon = styled.div`
