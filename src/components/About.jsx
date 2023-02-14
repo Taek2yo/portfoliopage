@@ -66,7 +66,7 @@ const Content = styled.div`
     align-items: center;
     display: flex;
     font-weight: 650;
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.4;
     margin: 0;
     padding: 0;
@@ -80,7 +80,7 @@ const Content = styled.div`
   }
   p{
     margin: 20px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -130,7 +130,7 @@ const Content2 = styled.div`
     align-items: center;
     display: flex;
     font-weight: 650;
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.4;
     margin: 0;
     padding: 0;
@@ -144,7 +144,7 @@ const Content2 = styled.div`
   }
   p{
     margin: 20px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 `;
 
