@@ -1,25 +1,43 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
+import bg from "../assets/img/bg4.jpg";
 function Project() {
   return (
-    <Container>
+    <Background>
       <Header/>
-      <Box></Box>
-    </Container>
+      <Container>
+
+      </Container>
+    </Background>
   );
 }
 
 export default Project;
 
-const Container = styled.div`
- background-size: cover;
+const Background = styled.div`
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(124, 118, 118, 0.151)),
+    url(${bg});
+  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  margin: 0;
+  position: relative;
 `;
 
-const Box = styled.div`
-  
-`
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  padding-top: 30px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 70vw;
+  }
+`;
