@@ -3,8 +3,10 @@ import styled from "styled-components";
 import bg2 from "../assets/img/bg2.jpg";
 import astrocat from "../assets/img/astrocat.gif";
 import Header from "./Header";
+import { useNavigate } from "react-router";
 
 function Intro() {
+  const navigate = useNavigate()
   return (
   <>
     <Background>
@@ -15,6 +17,7 @@ function Intro() {
           Hi! I'm TAEK
           <br /> Front-end developer
         </Greet>
+        <Btn onClick={()=>{navigate('/about')}}>Learn More</Btn>
       </Container>
       <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
     </Background>
@@ -62,6 +65,22 @@ const Greet = styled.h1`
     font-size: 2rem;
   }
 `;
+
+const Btn = styled.div`
+  background-color: black;
+  border-radius: 18px;
+  width: 9.5rem;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  :hover{
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+  }
+`
 
 const Copy = styled.div`
   color: gray;
