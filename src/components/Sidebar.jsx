@@ -61,7 +61,7 @@ const Container = styled.div`
     @media screen and (max-width: 768px){
         width: 70%
     }
-    animation-duration: 0.4s;
+    animation-duration: 0.3s;
     animation-timing-function: ease-out;
     animation-name: ${slideOpen};
     ${props =>
