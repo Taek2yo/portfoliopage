@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import styled from "styled-components";
 import Header from "./Header";
-import bg from "../assets/img/bg2.jpg";
+import bg from "../assets/img/bg4.jpg";
 import emailjs from '@emailjs/browser';
 
 function Contact() {
@@ -12,7 +12,7 @@ function Contact() {
 
     emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, form.current, `${process.env.REACT_APP_PUBLIC_KEY}`)
       .then((result) => {
-        alert("전송되었습니다.");
+        alert("의견을 남겨주셔서 감사합니다. 빠른 시일 내로 회신 드리겠습니다.");
       }, (error) => {
         alert("전송을 실패했습니다.")
       });
@@ -25,19 +25,21 @@ function Contact() {
         <Title>Contact Me.</Title>
         <Content>
         어떠한 의견이던 남겨주신다면 소중히 여기고 배우겠습니다. 감사합니다.
-        <br/>
-        회신 가능한 연락처를 남겨주시면 빠르게 회신드리겠습니다.
       </Content>
         <Form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input type="text" name="name"></input>
-          <label>Phone</label>
-          <input type="phone" name="phone"></input>
-          <label>Email</label>
-          <input type="email" name="email"></input>
+          <Input>
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Please write your name.."></input>
+            <label>Phone</label>
+            <input type="phone" name="phone" placeholder="Please write your phone.."></input>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Please write your email.."></input>
+          </Input>
+          <Message>
           <label>Message</label>
-          <textarea name="message" />
-          <input type="submit" value="Send" />
+          <textarea name="message"/>
+          <input type="submit" value="Send Message"/>
+          </Message>
         </Form>
       </Container>
     </Background>
@@ -89,4 +91,67 @@ const Container = styled.div`
 
 const Form = styled.form`
   
+  margin-top: 50px;
+  border: 3px solid whitesmoke;
+  box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+  border-radius: 20px;
+  width: 70%;
+  gap : 20px;
+  padding: 20px;
+  label{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+`
+
+const Input = styled.div`
+  display: flex;
+  flex-direction: column;
+  input{
+    border: 1px solid gray;
+    font-size: 1.1rem;
+    border-radius : 12px;
+    height: 3vh;
+    outline: none;
+  }
+  label{
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+`
+
+const Message = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  label{
+    margin-top: 12px;
+  }
+  input{
+    margin-top: 20px;
+    border: none;
+    height: 4.5vh;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    background: linear-gradient( to right, #8B93D8, #86A8E7, #927EC6 );
+    :hover{
+      background: #86A8E7;
+    }
+  }
+  textarea{
+    margin-top: 12px;
+    width: 100%;
+			height: 200px;
+			padding: 10px;
+			box-sizing: border-box;
+			border-radius: 12px;
+			font-size: 16px;
+			resize: both;
+      outline: none;
+  }
 `
