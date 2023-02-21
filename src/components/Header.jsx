@@ -34,7 +34,7 @@ const Container = styled.div`
 `
 const Title = styled.div`
   color: white;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin: 1.875rem;
   cursor: pointer;
@@ -45,14 +45,12 @@ const Title = styled.div`
 
 const Menu = styled.div`
   width: 35px;
-  height: 32px;
+  height: 35px;
   background-image:url(${menu});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin: 1.875rem;
   cursor: pointer;
-  :hover{
-    opacity: 0.5;
-  }
+
 `
