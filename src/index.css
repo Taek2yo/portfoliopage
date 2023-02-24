@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "googleTiltNeon";
+  src: url(./assets/fonts/TiltNeon-Regular.ttf);
+}
+:root {
+	--font-googleTiltNeon: "googleTiltNeon";
+}
+
+@font-face {
+  font-family: "googleNotoSerifKR";
+  src: url(./assets/fonts/NotoSerifKR-Regular.otf);
+}
+:root {
+	--font-googleNotoSerifKR: "googleNotoSerifKR";
+}

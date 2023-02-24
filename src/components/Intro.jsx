@@ -64,21 +64,22 @@ const Greet = styled.h1`
   @media screen and (max-width: 375px){
     font-size: 2rem;
   }
+  font-family: var(--font-googleTiltNeon);
 `;
 
 const Btn = styled.div`
-  background-color: black;
+  background-color: white;
+  font-family: var(--font-googleTiltNeon);
   border-radius: 18px;
   width: 9.5rem;
   text-align: center;
   padding: 12px;
-  color: white;
+  color: black;
   font-size: 1.2rem;
   font-weight: bold;
+  cursor: pointer;
   :hover{
-    background-color: whitesmoke;
-    color: black;
-    cursor: pointer;
+    background-color: gray;
   }
 `
 

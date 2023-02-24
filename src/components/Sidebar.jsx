@@ -35,7 +35,7 @@ export default Sidebar;
 
 const slideOpen = keyframes`
     from{
-        transform: translateX(34.725rem);
+        transform: translateX(30.725rem);
     }
     to{
         transform: translateX(0px);
@@ -46,11 +46,11 @@ const slideClose = keyframes`
         transform: translateX(0px);
     }
     to{
-        transform: translateX(34.725rem);
+        transform: translateX(30.725rem);
     }
 `
 const Container = styled.div`
-    width: 34.725rem;
+    width: 30.725rem;
     height: 100%;
     background-color: #101010;
     position: fixed;
@@ -99,6 +99,7 @@ const Wrapper = styled.div`
 
 const Menu = styled.div`
     font-size: 2rem;
+    font-family: var(--font-googleTiltNeon);
     font-weight: 700;
     line-height: 1.1;
     padding: 0.3125rem 0;

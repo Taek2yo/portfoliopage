@@ -37,6 +37,7 @@ const Title = styled.div`
   font-size: 1.8rem;
   font-weight: bold;
   margin: 1.875rem;
+  font-family: var(--font-googleTiltNeon);
   cursor: pointer;
   @media screen and (max-width: 760px){
         width: 100vw;

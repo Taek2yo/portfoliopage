@@ -29,11 +29,11 @@ function Contact() {
         <Form ref={form} onSubmit={sendEmail}>
           <Input>
             <label>Name</label>
-            <input type="text" name="name" placeholder="Please write your name.."></input>
+            <input type="text" name="name" ></input>
             <label>Phone</label>
-            <input type="phone" name="phone" placeholder="Please write your phone.."></input>
+            <input type="phone" name="phone" ></input>
             <label>Email</label>
-            <input type="email" name="email" placeholder="Please write your email.."></input>
+            <input type="email" name="email"></input>
           </Input>
           <Message>
           <label>Message</label>
@@ -42,6 +42,7 @@ function Contact() {
           </Message>
         </Form>
       </Container>
+      <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
     </Background>
   );
 }
@@ -49,6 +50,7 @@ function Contact() {
 export default Contact;
 
 const Background = styled.div`
+font-family: var(--font-googleTiltNeon);
   background-image: linear-gradient(
       rgba(0, 0, 0, 0),
       rgba(124, 118, 118, 0.151)
@@ -154,4 +156,12 @@ const Message = styled.div`
 			resize: both;
       outline: none;
   }
+`
+const Copy = styled.div`
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  padding: 15px;
 `

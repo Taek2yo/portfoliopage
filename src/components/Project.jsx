@@ -9,6 +9,7 @@ function Project() {
       <Container>
 
       </Container>
+      <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
     </Background>
   );
 }
@@ -41,3 +42,12 @@ const Container = styled.div`
     width: 70vw;
   }
 `;
+
+const Copy = styled.div`
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  padding: 15px;
+`

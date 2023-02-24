@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import bg3 from "../assets/img/bg3.jpg";
-import bear from "../assets/img/bear.jpg";
+import me from "../assets/img/me.png";
 import velog from "../assets/img/velog.png"
 import github from "../assets/img/github.png"
+import notion from "../assets/img/notion.png"
 function About() {
   const url1 ='https://github.com/Taek2yo'
   const url2 = 'https://velog.io/@taek2yo'
@@ -14,34 +15,37 @@ function About() {
       <Header />
         <Container>
           <Img>
-            <img src={bear} alt=''/>
+            <img src={me} alt=''/>
           </Img>
-
+          <My>
+          "28살 신입 프론트 개발자"
+          </My>
           <ContentWrap>
             <Content>
-              <span>Slow and Steady Wins the Race</span>
+            <ContentTitle>Slow and Steady Wins the Race</ContentTitle> 
               <div className="separator"></div>
-              <p>
+              <Desc>
                 새로운 목표에 대한 도전을 즐기며, 또한 그 목표를 
                 천천히, 꾸준히 계속해서 하는 것이 가장 빠른 길이라고 생각합니다.
-              </p>
+                그 일환으로 '1일 1커밋'을 지키고있습니다.
+              </Desc>
             </Content>
             <Content2>
-              <span>배운 것을 잊지 않기 위한 노력</span>
-              <div className="separator2"></div>
-              <p>
-                독서, 강의, 블로그 등 매일 공부한 것은 기록하여 남기려고 노력합니다.
-              </p>
-              <p>
-                개인 블로그와 깃허브를 이용하여 배운 지식을 후에 활용하거나 다른 사람들과 함께 공유하고자 합니다. 
-              </p>
+            <ContentTitle>배운 것을 잊지 않기 위한 노력</ContentTitle>
+              <div className="separator"></div>
+              <Desc>
+              독서, 강의, 블로그 등 매일 공부한 것은 기록하여 남기려고 노력합니다.
+              개인 블로그와 깃허브를 이용하여 배운 지식을 후에 활용하거나 다른 사람들과 함께 공유하고자 합니다. 
+              </Desc>              
             </Content2>
             <Icon>
-                    <img src={github} alt="asdasdasd" onClick={()=>{window.open(url1)}}/>
+                    <img src={github} alt="" onClick={()=>{window.open(url1)}}/>
                     <img src={velog} alt="" onClick={()=>{window.open(url2)}}/>
-                </Icon>
+                    <img src={notion} alt="" /* onClick={()=>{window.open(url3)}} *//>
+              </Icon>
           </ContentWrap>
         </Container>
+        <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
       </Background>
     </>
   );
@@ -50,6 +54,7 @@ function About() {
 export default About;
 
 const Background = styled.div`
+  font-family: var(--font-googleNotoSerifKR);
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(124, 118, 118, 0.151)),url(${bg3});
   background-size: 100% 100%;
   background-size: cover;
@@ -57,65 +62,61 @@ const Background = styled.div`
   background-position: center;
   height: 100vh;
   position: relative;
+  @media screen and (max-width: 1200px) {
+    height: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    height: 100%;
+  }
 `;
+
+const My = styled.div`
+  margin: auto;
+  color: white;
+  margin-top: 20px;
+  font-size: 1.2rem;
+`
 
 const Content = styled.div`
   color: white;
-  span {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-weight: 650;
-    font-size: 2.2rem;
-    line-height: 1.4;
-    margin: 0;
-    padding: 0;
-    letter-spacing: -0.05rem;
-  }
-  .separator {
-    height: 2px;
-    width: 60px;
-    background: gray;
-    margin: 20px auto;
-  }
-  p{
-    margin: 20px;
-    font-size: 1.5rem;
-  }
+
 `;
+const ContentTitle = styled.div`
+  font-size: 1.7rem;
+`
+
+
+const Desc = styled.div`
+  font-size: 1.3rem;
+  span{
+    font-weight: bold;
+  }
+`
 
 const Img = styled.div`
-  background-color: white;
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
+  background-color: rgba(124, 118, 118, 0.151);
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  box-shadow: 2px 2px 5px 4px #4B4A54;
   img{
-    /* width: 100%; */
-    max-width: 100%;
-    height: 100%;
-  }
-  @media screen and (max-width: 768px){
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-   }
-   @media screen and (max-width: 480px) and (max-width: 768px){
     width: 200px;
     height: 200px;
-    margin: 0 auto;
+    border-radius: 100%;
+    background-size: contain;
   }
 `;
 
 const Container = styled.div`
-  position: absolute;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 70%;
-  gap: 25px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding-top: 75px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  padding-top: 30px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     width: 70vw;
@@ -136,12 +137,6 @@ const Content2 = styled.div`
     padding: 0;
     letter-spacing: -0.05rem;
   }
-  .separator2 {
-    height: 2px;
-    width: 60px;
-    background: gray;
-    margin: 20px auto;
-  }
   p{
     margin: 20px;
     font-size: 1.5rem;
@@ -149,14 +144,14 @@ const Content2 = styled.div`
 `;
 
 const ContentWrap = styled.div`
+  margin-top: 30px;
+  width: 75%;
   flex-direction: column;
-  @media screen and (max-width: 768px){
-    span{
-      font-size: 1.5rem;
-    }
-    p{
-      font-size: 1rem;
-    }
+  .separator {
+    height: 2px;
+    width: 60px;
+    background: rgba(12, 12, 12, 0.486);
+    margin: 20px auto;
   }
 `;
 
@@ -168,6 +163,7 @@ const Icon = styled.div`
     padding: 15px;
     gap: 30px;
     justify-content: center;
+    margin-top: 30px;
     img{
         width: 3rem;
         border-radius: 100%;
@@ -176,4 +172,12 @@ const Icon = styled.div`
           opacity: 0.5;
         }
     }
+`
+const Copy = styled.div`
+  color: gray;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  padding: 15px;
 `

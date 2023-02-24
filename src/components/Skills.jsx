@@ -33,6 +33,7 @@ function Skills() {
         </Box>
         
         </Container>
+        <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
       </Background>
     </>
   );
@@ -44,6 +45,7 @@ const Background = styled.div`
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(124, 118, 118, 0.151)),
     url(${bg});
   background-size: 100% 100%;
+  font-family: var(--font-googleTiltNeon);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -118,3 +120,12 @@ const ImgBox = styled.div`
     width: 300px;
   }
 `;
+
+const Copy = styled.div`
+  color: gray;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  padding: 15px;
+`
