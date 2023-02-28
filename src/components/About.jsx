@@ -116,7 +116,7 @@ const Container = styled.div`
   justify-content: center;
   width: 50%;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 80px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     width: 70vw;

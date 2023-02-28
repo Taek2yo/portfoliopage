@@ -4,6 +4,8 @@ import styled, { keyframes,css } from "styled-components";
 import Xbtn from "../assets/img/x-button.png"
 import velog from "../assets/img/velog.png"
 import github from "../assets/img/github.png"
+import notion from "../assets/img/notion.png"
+
 function Sidebar(props){
     const url1 ='https://github.com/Taek2yo'
     const url2 = 'https://velog.io/@taek2yo'
@@ -23,6 +25,7 @@ function Sidebar(props){
                 <Icon>
                     <img src={github} alt="asdasdasd" onClick={()=>{window.open(url1)}}/>
                     <img src={velog} alt="" onClick={()=>{window.open(url2)}}/>
+                    <img src={notion} alt="" /* onClick={()=>{window.open(url3)}} *//>
                 </Icon>
                 <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
             </div>

@@ -51,6 +51,12 @@ const Background = styled.div`
   background-position: center;
   height: 100%;
   position: relative;
+  @media screen and (max-width: 1200px) {
+    height: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 const Container = styled.div`
@@ -59,9 +65,10 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  margin: auto;
-  padding-top: 30px;
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 100px;
+  gap: 40px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     width: 70vw;
@@ -69,8 +76,9 @@ const Container = styled.div`
 `;
 
 const Box = styled.div`
-  padding: 1.5rem;
-  margin: 0 auto 2rem;
+  width: 400px;
+  padding-right: 2rem;
+  margin-left: -1rem;
   background-color: white;
   border: 1px solid rgba(56, 54, 54, 0.408);
   border-radius: 1rem;
@@ -97,20 +105,22 @@ const Box = styled.div`
   }
   @media screen and (max-width: 667px) {
     flex-direction: column;
-    width: 300px;
+    width: 100%;
   }
 `;
 
 const Title = styled.div`
   font-size: 2rem;
   font-weight: bold;
+  padding: 1.5rem;
   border-bottom : 1px solid black;
   padding-bottom: 1rem;
 `;
 
 const ImgBox = styled.div`
-  width: 400px;
-  padding-top: 15px;
+  /* width: 400px; */
+  padding: 1.5rem;
+  box-sizing: border-box;
   img{
     max-width: 100%;
     height: 100%;

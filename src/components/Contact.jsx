@@ -19,6 +19,7 @@ function Contact() {
   };
 
   return (
+  
     <Background>
       <Header />
       <Container>
@@ -46,16 +47,11 @@ function Contact() {
     </Background>
   );
 }
-
 export default Contact;
 
 const Background = styled.div`
-font-family: var(--font-googleTiltNeon);
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0),
-      rgba(124, 118, 118, 0.151)
-    ),
-    url(${bg});
+  font-family: var(--font-googleTiltNeon);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(124, 118, 118, 0.151)),url(${bg});
   background-size: 100% 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -71,8 +67,11 @@ const Title = styled.div`
 `;
 
 const Content = styled.div`
+  font-family: var(--font-googleNotoSerifKR);
+  font-size: 1.2rem;
   color: white;
   text-align: center;
+  margin-top: 15px;
 `;
 
 const Container = styled.div`
@@ -84,7 +83,7 @@ const Container = styled.div`
   justify-content: center;
   width: 50%;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 90px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     width: 70vw;

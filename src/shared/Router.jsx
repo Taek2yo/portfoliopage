@@ -5,11 +5,10 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Project from "../components/Project";
 import Contact from "../components/Contact";
-import Header from "../components/Header";
+
 function Router() {
   return (
     <BrowserRouter>
-    {/* <Header/> */}
       <Routes>
         <Route path="/" exact element={<Intro />} />
         <Route path="/about" exact element={<About />} />
