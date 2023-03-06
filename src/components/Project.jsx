@@ -2,40 +2,60 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import bg from "../assets/img/bg4.jpg";
-import purple from "../assets/img/onPurple.jpg"
-import portfolio from "../assets/img/portfolio.png"
+import purple from "../assets/img/onPurple.jpg";
+import portfolio from "../assets/img/portfolio.png";
+import zoom from "../assets/img/zoom-logo.png"
 import Card from "./Card";
 function Project() {
   const projects = [
-    { 
-      img :`${purple}`,
-      title : "On Purple",
-      subtitle : "sub",
-      desc : "desc",
-      mypart :"part",
-      stacks :"stacks",
-      github :"https://github.com/Taek2yo/On-purple",
+    {
+      img: `${purple}`,
+      title: "On Purple",
+      subtitle: "매칭 서비스 기반의 데이팅 플랫폼",
+      duration : "2022.09.16 ~ 2022.10.28",
+      desc: "강원 이노베이션 캠프 실전 프로젝트로 6인 팀 프로젝트 입니다. 커뮤니티 기능을 동반한 데이팅 플랫폼을 웹앱으로 만들었습니다.",
+      mypart: "게시판 CRUD , 1:1 채팅기능 구현, 검색 기능 구현, PWA 적용",
+      stacks: "React, Redux, axios, Socket.io, JavaScript",
+      github: "https://github.com/Taek2yo/On-purple",
     },
     {
-      img :`${portfolio}`,
-      title : "개인 포트폴리오",
-      subtitle : "프론트엔드 개발자 포트폴리오 사이트 개발",
-      desc : "",
-      mypart :"",
-      stacks :"",
-      github :"https://github.com/Taek2yo/portfoliopage",
-    }
-  ]
+      img: `${portfolio}`,
+      title: "개인 포트폴리오",
+      subtitle: "프론트엔드 개발자 포트폴리오 사이트",
+      duration :"2023.01.24 ~ 2023.03.10",
+      desc: "React를 사용하여 개발하고, SEO 학습 및 적용, 개인 PR을 위해 개발한 웹사이트 입니다. 라이브러리 사용을 최소한으로 줄여보았습니다.",
+      mypart: "1인 개발",
+      stacks: "React, JavaScript",
+      github: "https://github.com/Taek2yo/portfoliopage",
+    },
+    {
+      img: `${zoom}`,
+      title: "줌(Zoom) 클론 코딩",
+      subtitle: "Websocket, 학습을 위한 줌(Zoom) 클론 코딩",
+      duration :"2023.03.10 ~ ",
+      desc: "팀 프로젝트때 사용한 Websocket, Socket.io 학습이 부족하다고 느껴 다시 학습하고자 클론 코딩을 해보았습니다. 노마드 코더의 강의를 들으며 진행했지만, 코드를 따라 치는게 아닌 제 생각을 적용해보려고 노력하였습니다.",
+      mypart: "클론 코딩",
+      stacks: "JavaScript",
+      github: "https://github.com/Taek2yo/portfoliopage",
+    },
+  ];
   return (
     <Background>
-      <Header/>
+      <Header />
       <Container>
-      <Title>MY PROJECT</Title>
-      <Wrap>
-      {projects.map((item)=>(<Card item={item} key={item.title}/>))}
-      </Wrap>
+        <Title>MY PROJECT</Title>
+        
+        <Wrap>
+          {projects.map((item) => (
+            <Card item={item} key={item.title} />
+          ))}
+        </Wrap>
+
       </Container>
-      <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
+      <Copy>
+        © 2023. KANG MIN TAEK. <br />
+        ALL RIGHTS RESERVED.
+      </Copy>
     </Background>
   );
 }
@@ -44,29 +64,38 @@ export default Project;
 
 const Background = styled.div`
   font-family: var(--font-googleNotoSerifKR);
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(124, 118, 118, 0.151)),url(${bg});
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(124, 118, 118, 0.151)
+    ),
+    url(${bg});
   background-size: 100% 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
   position: relative;
+  @media screen and (max-width: 1200px) {
+    height: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    height: 100%;
+  }
 `;
-
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  margin: auto;
-  padding-top: 90px;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    width: 70vw;
+  padding-top: 100px;
+  @media screen and (max-width: 498px){
+    .container{
+      padding-top: 150px;
+      position: relative;
+      z-index: 0;
+      display: none;
+    }
   }
 `;
 
@@ -77,7 +106,7 @@ const Copy = styled.div`
   width: 100%;
   font-size: 12px;
   padding: 15px;
-`
+`;
 
 const Title = styled.div`
   color: white;
@@ -87,5 +116,7 @@ const Title = styled.div`
 
 const Wrap = styled.div`
   display: flex;
-  gap: 30px;
-`
+  flex-wrap: wrap;
+  gap: 5vw;
+  margin-top: 25px;
+`;
