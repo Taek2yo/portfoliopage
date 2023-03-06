@@ -17,7 +17,7 @@ function Header(){
         </Title>
         <Menu onClick={()=>{toggleMenu()}}/>
     </Container>
-    {isOpen ? <Sidebar toggleMenu={toggleMenu}/> : null}
+    <Sidebar toggleMenu={toggleMenu} isOpen={isOpen}/>
   </>
   )
 }

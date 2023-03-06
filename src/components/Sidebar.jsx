@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState, useEffect}from "react";
 import { useNavigate } from "react-router";
 import styled, { keyframes,css } from "styled-components";
 import Xbtn from "../assets/img/x-button.png"
@@ -6,14 +6,27 @@ import velog from "../assets/img/velog.png"
 import github from "../assets/img/github.png"
 import notion from "../assets/img/notion.png"
 
-function Sidebar(props){
+function Sidebar({isOpen, toggleMenu}){
     const url1 ='https://github.com/Taek2yo'
     const url2 = 'https://velog.io/@taek2yo'
     const navigate = useNavigate();
+    const [animate, setAnimate] = useState(false);
+    const [localVisible, setLocalVisible] = useState(isOpen);
+
+    useEffect(() => {
+        // isOpen 값이 true -> false 가 되는 것을 감지
+        if (localVisible && !isOpen) {
+          setAnimate(true);
+          setTimeout(() => setAnimate(false), 250);
+        }
+        setLocalVisible(isOpen);
+      }, [localVisible, isOpen]);
+
+    if (!animate && !localVisible) return null;
     return(
-        <Container /*  disappear={!props.toggleMenu()} */>
+        <Container disappear={!isOpen}>
         <Wrap>
-            <Close onClick={()=>{props.toggleMenu()}}></Close>
+            <Close onClick={()=>toggleMenu()}></Close>
             <Wrapper>
                 <Menu><span onClick={()=>{navigate("/")}}>HOME</span></Menu>
                 <Menu><span onClick={()=>{navigate("/about")}}>ABOUT</span></Menu>
