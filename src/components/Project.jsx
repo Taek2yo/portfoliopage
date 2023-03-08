@@ -15,7 +15,7 @@ function Project() {
       duration : "2022.09.16 ~ 2022.10.28",
       desc: "강원 이노베이션 캠프 실전 프로젝트로 6인 팀 프로젝트 입니다. 커뮤니티 기능을 동반한 데이팅 플랫폼을 웹앱으로 만들었습니다.",
       mypart: "게시판 CRUD , 1:1 채팅기능 구현, 검색 기능 구현, PWA 적용",
-      stacks: "React, Redux, axios, Socket.io, JavaScript",
+      stacks: "React, Redux, axios, JavaScript, AWS",
       github: "https://github.com/Taek2yo/On-purple",
     },
     {
@@ -25,7 +25,7 @@ function Project() {
       duration :"2023.01.24 ~ 2023.03.10",
       desc: "React를 사용하여 개발하고, SEO 학습 및 적용, 개인 PR을 위해 개발한 웹사이트 입니다. 라이브러리 사용을 최소한으로 줄여보았습니다.",
       mypart: "1인 개발",
-      stacks: "React, JavaScript",
+      stacks: "React, JavaScript, Vercel",
       github: "https://github.com/Taek2yo/portfoliopage",
     },
     {
