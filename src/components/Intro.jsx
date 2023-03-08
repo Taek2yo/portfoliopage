@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useMemo, useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 import bg2 from "../assets/img/bg2.jpg";
 import astrocat from "../assets/img/astrocat.gif";
 import Header from "./Header";
@@ -7,6 +7,23 @@ import { useNavigate } from "react-router";
 
 function Intro() {
   const navigate = useNavigate()
+  const greetings = useMemo(() => {
+    return "Hi! I'm TAEK\nFront-End Developer";
+  }, []);
+
+  const [landingGreet, setLandingGreet] = useState("");
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLandingGreet(landingGreet + greetings[count]); 
+        setCount(count + 1); 
+    }, 100);
+    
+    if(count === greetings.length)  {  
+        clearInterval(interval); 
+    }
+    return () => clearInterval(interval); 
+})
   return (
   <>
     <Background>
@@ -14,10 +31,9 @@ function Intro() {
       <Container className="container">
       <ProfileImg />
         <Greet>
-          Hi! I'm TAEK
-          <br /> Front-end developer
+          {landingGreet}
         </Greet>
-        <Btn onClick={()=>{navigate('/about')}}>Learn More</Btn>
+        <Btn onClick={()=>{navigate('/about')}}>About</Btn>
       </Container>
       <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
     </Background>
@@ -57,21 +73,33 @@ const Container = styled.div`
   }
 `;
 
-const Greet = styled.h1`
+const cursor = keyframes`
+ from { border-right: 2px solid #222; }
+  to { border-right: 2px solid #777; }
+`
+
+const Greet = styled.pre`
   color: white;
   font-size: 4rem;
   font-weight: bold;
+  height: 12vh;
   @media screen and (max-width: 375px){
     font-size: 2rem;
   }
   font-family: var(--font-googleTiltNeon);
+  ::after{
+    content: '';
+    margin-left: 0.6rem;
+    border-right: 2px solid #777;
+    animation: ${cursor} .9s infinite steps(2);
+  }
 `;
 
 const Btn = styled.div`
   background-color: white;
   font-family: var(--font-googleTiltNeon);
   border-radius: 18px;
-  width: 9.5rem;
+  width: 8rem;
   text-align: center;
   padding: 12px;
   color: black;
