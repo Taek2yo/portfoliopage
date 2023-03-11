@@ -44,13 +44,23 @@ function Intro() {
 export default Intro;
 
 const Background = styled.div`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(${bg2});
+  font-family: var(--font-googleNotoSerifKR);
+  background-image: url(${bg2});
+  background-size: 100% 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
   position: relative;
+  @media screen and (max-width: 1200px) {
+    height: 100vh;
+  }
+  @media screen and (max-width: 768px) {
+    height: 100vh;
+  }
+  @media screen and (max-width: 414px) {
+    height: 100vh;
+  }
 `;
 
 const Container = styled.div`
@@ -59,7 +69,7 @@ const Container = styled.div`
   position: absolute;
   top: 43%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -43%);
   align-items: center;
   gap: 20px;
   padding-top: 100px;
@@ -80,7 +90,7 @@ const cursor = keyframes`
 
 const Greet = styled.pre`
   color: white;
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: bold;
   height: 12vh;
   @media screen and (max-width: 375px){
@@ -132,5 +142,4 @@ const ProfileImg = styled.div`
   background-size: cover;
   background-position: center;
   position: relative;
-  z-index: -1;
 `;

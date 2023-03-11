@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
-import bg from "../assets/img/bg4.jpg";
+import bg2 from "../assets/img/bg2.jpg";
 import purple from "../assets/img/onPurple.jpg";
 import portfolio from "../assets/img/portfolio.png";
 import zoom from "../assets/img/zoom-logo.png"
@@ -24,7 +24,7 @@ function Project() {
       title: "개인 포트폴리오",
       subtitle: "프론트엔드 개발자 포트폴리오 사이트",
       duration :"2023.01.24 ~",
-      desc: "React를 사용하여 개발하고, SEO 학습 및 적용, 개인 PR을 위해 개발한 웹사이트 입니다. 라이브러리 사용을 최소한으로 줄여보았습니다.",
+      desc: "React를 사용하여 개발하고, 반응형 웹, SEO 학습 및 적용, 개인 PR을 위해 개발한 웹사이트 입니다. 라이브러리 사용을 최소한으로 줄여보았습니다.",
       mypart: "1인 개발",
       stacks: "React, JavaScript, Vercel",
       github: "https://github.com/Taek2yo/portfoliopage",
@@ -71,7 +71,7 @@ const Background = styled.div`
       rgba(0, 0, 0, 0),
       rgba(124, 118, 118, 0.151)
     ),
-    url(${bg});
+    url(${bg2});
   background-size: 100% 100%;
   background-size: cover;
   background-repeat: no-repeat;

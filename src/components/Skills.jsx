@@ -100,7 +100,7 @@ const Box = styled.div`
     }
 }
   :hover{
-    opacity: 0.9;
+    z-index: 0;
 	  animation: post-ani 0.8s linear 1;
   }
   @media screen and (max-width: 667px) {

@@ -45,7 +45,7 @@ function About() {
               </Icon>
           </ContentWrap>
         </Container>
-        <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
+        {/* <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy> */}
       </Background>
     </>
   );
@@ -118,7 +118,7 @@ const Container = styled.div`
   justify-content: center;
   width: 50%;
   margin: auto;
-  padding-top: 80px;
+  padding-top: 150px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     width: 70vw;

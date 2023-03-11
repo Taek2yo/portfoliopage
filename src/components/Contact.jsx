@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import bg from "../assets/img/bg4.jpg";
@@ -58,6 +58,15 @@ const Background = styled.div`
   background-position: center;
   height: 100vh;
   position: relative;
+  @media screen and (max-width: 1200px) {
+    height: 100vh;
+  }
+  @media screen and (max-width: 768px) {
+    height: 100vh;
+  }
+  @media screen and (max-width: 414px) {
+    height: 100%;
+  }
 `;
 
 const Title = styled.div`
@@ -83,7 +92,7 @@ const Container = styled.div`
   justify-content: center;
   width: 50%;
   margin: auto;
-  padding-top: 90px;
+  padding-top: 120px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     width: 70vw;
@@ -137,7 +146,7 @@ const Message = styled.div`
     font-size: 1.2rem;
     font-weight: 500;
     color: white;
-    padding: 12px;
+    font-size: 1.1rem;
     cursor: pointer;
     background: linear-gradient( to right, #8B93D8, #86A8E7, #927EC6 );
     :hover{
@@ -163,4 +172,5 @@ const Copy = styled.div`
   width: 100%;
   font-size: 12px;
   padding: 15px;
+  padding-top: 20px;
 `

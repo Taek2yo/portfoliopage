@@ -35,6 +35,9 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
+  background-color: #101010;
+  box-shadow: 2px 2px 2px 2px ;
+  z-index: 1;
 `
 const Title = styled.div`
   color: white;

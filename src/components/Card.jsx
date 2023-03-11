@@ -53,7 +53,7 @@ const Box = styled.div`
   border-radius: 12px;
   width: 400px;
   /* height: 100%; */
-  box-shadow: 2px 3px 3px 3px #4b4a54;
+  box-shadow: 2px 3px 3px 3px;
   cursor: pointer;
   :hover{
     opacity: 0.9;
@@ -117,7 +117,7 @@ const Icon = styled.div`
   width: 400px;
   font-size: 1.2rem;
   justify-content: space-around;
-  box-shadow: 2px 3px 3px 3px #4b4a54;
+  box-shadow: 2px 3px 3px 3px black;
   img {
     width: 1.8rem;
     border-radius: 100%;
