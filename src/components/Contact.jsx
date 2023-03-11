@@ -1,15 +1,34 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import bg from "../assets/img/bg4.jpg";
 import emailjs from '@emailjs/browser';
 
 function Contact() {
-  const form = useRef();
+  // input 상태 관리
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
+  const [mail, setMail] = useState('');
+  const [message, setMessage] = useState('');
+  
+  // onChange
+  const onChangeName = (e) =>{
+    setName(e.target.value);
+  }
+  const onChangePhone = (e) =>{
+    setNumber(e.target.value);
+  }
+  const onChangeMail = (e) =>{
+    setMail(e.target.value);
+  }
+  const onChangeMessage = (e) =>{
+    setMessage(e.target.value);
+  } 
 
+  // email-Js 
+  const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, form.current, `${process.env.REACT_APP_PUBLIC_KEY}`)
       .then((result) => {
         alert("의견을 남겨주셔서 감사합니다. 빠른 시일 내로 회신 드리겠습니다.");
@@ -17,7 +36,6 @@ function Contact() {
         alert("전송을 실패했습니다.")
       });
   };
-
   return (
   
     <Background>
@@ -30,16 +48,16 @@ function Contact() {
         <Form ref={form} onSubmit={sendEmail}>
           <Input>
             <label>Name</label>
-            <input type="text" name="name" ></input>
+            <input type="text" name="name" onChange={onChangeName} value={name}></input>
             <label>Phone</label>
-            <input type="phone" name="phone" ></input>
+            <input type="phone" name="phone" onChange={onChangePhone} value={number}></input>
             <label>Email</label>
-            <input type="email" name="email"></input>
+            <input type="email" name="email" onChange={onChangeMail} value={mail}></input>
           </Input>
           <Message>
           <label>Message</label>
-          <textarea name="message"/>
-          <input type="submit" value="Send Message"/>
+          <textarea name="message" onChange={onChangeMessage} value={message}/>
+          {name === "" || number === "" || mail === "" || message === "" ? <button type="button">Fill in the blanks</button> : <input type="submit" value="Send Message"/>}
           </Message>
         </Form>
       </Container>
@@ -153,16 +171,31 @@ const Message = styled.div`
       background: #86A8E7;
     }
   }
+  button{
+    margin-top: 20px;
+    border: none;
+    height: 4.5vh;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: linear-gradient( to right, #8B93D8, #86A8E7, #927EC6 );
+    :hover{
+      background: #86A8E7;
+    }
+  }
   textarea{
     margin-top: 12px;
     width: 100%;
-			height: 200px;
-			padding: 10px;
-			box-sizing: border-box;
-			border-radius: 12px;
-			font-size: 16px;
-			resize: both;
-      outline: none;
+    height: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-size: 16px;
+    resize: both;
+    outline: none;
   }
 `
 const Copy = styled.div`
