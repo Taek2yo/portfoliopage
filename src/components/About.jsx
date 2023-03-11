@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import bg3 from "../assets/img/bg3.jpg";
-import me from "../assets/img/me.png";
+import me from "../assets/img/me.jpg";
 import velog from "../assets/img/velog.png"
 import github from "../assets/img/github.png"
 import notion from "../assets/img/notion.png"
@@ -22,7 +22,7 @@ function About() {
           </My>
           <ContentWrap>
             <Content>
-            <ContentTitle>Slow and Steady Wins the Race</ContentTitle> 
+            <ContentTitle>" Slow and Steady Wins the Race "</ContentTitle> 
               <div className="separator"></div>
               <Desc>
                 새로운 목표에 대한 도전을 즐기며, 또한 그 목표를 
@@ -31,7 +31,7 @@ function About() {
               </Desc>
             </Content>
             <Content2>
-            <ContentTitle>배운 것을 잊지 않기 위한 노력</ContentTitle>
+            <ContentTitle>" 배운 것을 잊지 않기 위한 노력 "</ContentTitle>
               <div className="separator"></div>
               <Desc>
               독서, 강의, 블로그 등 매일 공부한 것은 기록하여 남기려고 노력합니다.
@@ -82,7 +82,9 @@ const Content = styled.div`
 
 `;
 const ContentTitle = styled.div`
+  text-align: center;
   font-size: 1.7rem;
+  color: black;
 `
 
 

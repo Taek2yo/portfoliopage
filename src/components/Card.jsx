@@ -5,6 +5,7 @@ import home from "../assets/img/home.png"
 function Card(item) {
   const content = item.item;
   const url = content.github;
+  const page = content.url;
   return (
     <Container>
       <Box>
@@ -21,7 +22,7 @@ function Card(item) {
       </Box>
       <Icon>
         <img src={github} onClick={()=>{window.open(url)}} alt="" />
-        <img src={home} alt="" />
+        <img src={home}  onClick={()=>{window.open(page)}} alt="" />
       </Icon>
     </Container>
   );

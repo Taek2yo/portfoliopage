@@ -17,16 +17,18 @@ function Project() {
       mypart: "게시판 CRUD , 1:1 채팅기능 구현, 검색 기능 구현, PWA 적용",
       stacks: "React, Redux, axios, JavaScript, AWS",
       github: "https://github.com/Taek2yo/On-purple",
+      url:"https://on-purple.com/",
     },
     {
       img: `${portfolio}`,
       title: "개인 포트폴리오",
       subtitle: "프론트엔드 개발자 포트폴리오 사이트",
-      duration :"2023.01.24 ~ 2023.03.10",
+      duration :"2023.01.24 ~",
       desc: "React를 사용하여 개발하고, SEO 학습 및 적용, 개인 PR을 위해 개발한 웹사이트 입니다. 라이브러리 사용을 최소한으로 줄여보았습니다.",
       mypart: "1인 개발",
       stacks: "React, JavaScript, Vercel",
       github: "https://github.com/Taek2yo/portfoliopage",
+      url:"",
     },
     {
       img: `${zoom}`,
@@ -37,12 +39,13 @@ function Project() {
       mypart: "클론 코딩",
       stacks: "JavaScript",
       github: "https://github.com/Taek2yo/portfoliopage",
+      url:"",
     },
   ];
   return (
     <Background>
       <Header />
-      <Container>
+      <Container className="container">
         <Title>MY PROJECT</Title>
         
         <Wrap>

@@ -20,7 +20,7 @@ function Intro() {
     }, 100);
     
     if(count === greetings.length)  {  
-        clearInterval(interval); 
+      clearInterval(interval); 
     }
     return () => clearInterval(interval); 
 })
@@ -112,6 +112,7 @@ const Btn = styled.div`
 `
 
 const Copy = styled.div`
+  font-family: var(--font-googleTiltNeon);
   color: gray;
   position: fixed;
   bottom: 0;

@@ -11,7 +11,7 @@ function Skills() {
     <>
       <Background>
         <Header />
-        <Container>
+        <Container className="container">
         <Box>
           <Title>Front-End</Title>
           <ImgBox><img src={FE} alt=""/></ImgBox>
