@@ -45,7 +45,7 @@ function About() {
               </Icon>
           </ContentWrap>
         </Container>
-        {/* <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy> */}
+        <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
       </Background>
     </>
   );
@@ -62,7 +62,7 @@ const Background = styled.div`
   background-position: center;
   height: 100vh;
   position: relative;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1280px) {
     height: 100%;
   }
   @media screen and (max-width: 768px) {
@@ -161,13 +161,13 @@ const Icon = styled.div`
     display: flex;
     /* background-color: skyblue; */
     color: #ccc;
-    width: 100%;
+    width: 95%;
     padding: 15px;
     gap: 30px;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
     img{
-        width: 3rem;
+        width: 2.5rem;
         border-radius: 100%;
         cursor: pointer;
         :hover{
@@ -182,4 +182,5 @@ const Copy = styled.div`
   width: 100%;
   font-size: 12px;
   padding: 15px;
+  z-index: 1;
 `

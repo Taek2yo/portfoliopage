@@ -76,11 +76,11 @@ const Background = styled.div`
   background-position: center;
   height: 100vh;
   position: relative;
-  @media screen and (max-width: 1200px) {
-    height: 100vh;
+  @media screen and (max-width: 1280px) {
+    height: 100%;
   }
   @media screen and (max-width: 768px) {
-    height: 100vh;
+    height: 100%;
   }
   @media screen and (max-width: 414px) {
     height: 100%;
@@ -118,7 +118,6 @@ const Container = styled.div`
 `;
 
 const Form = styled.form`
-  
   margin-top: 50px;
   border: 3px solid whitesmoke;
   box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
@@ -199,7 +198,7 @@ const Message = styled.div`
   }
 `
 const Copy = styled.div`
-  color: white;
+  color: gray;
   position: fixed;
   bottom: 0;
   width: 100%;

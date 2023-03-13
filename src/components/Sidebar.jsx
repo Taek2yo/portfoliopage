@@ -139,7 +139,7 @@ const Icon = styled.div`
     padding: 15px;
     gap: 15px;
     img{
-        width: 3rem;
+        width: 2.5rem;
         border-radius: 100%;
         cursor: pointer;
         :hover{
