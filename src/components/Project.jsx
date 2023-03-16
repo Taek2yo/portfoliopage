@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
-import styled, { keyframes } from "styled-components";
+import React, { useState } from "react";
+import styled from "styled-components";
 import Header from "./Header";
 import bg2 from "../assets/img/bg2.jpg";
 import purple from "../assets/img/onPurple.jpg";
