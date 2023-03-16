@@ -10,7 +10,9 @@ function Contact() {
   const [number, setNumber] = useState('');
   const [mail, setMail] = useState('');
   const [message, setMessage] = useState('');
-  
+  if ( message.length > 500){
+    window.alert("500자 이내로 작성 부탁드립니다 😀")
+  }
   // onChange
   const onChangeName = (e) =>{
     setName(e.target.value);
@@ -55,8 +57,8 @@ function Contact() {
             <input type="email" name="email" onChange={onChangeMail} value={mail}></input>
           </Input>
           <Message>
-          <label>Message</label>
-          <textarea name="message" onChange={onChangeMessage} value={message}/>
+          <label>Message ({message.length}/500)</label>
+          <textarea name="message" onChange={onChangeMessage} value={message} maxLength="500"/>
           {name === "" || number === "" || mail === "" || message === "" ? <button type="button">Fill in the blanks</button> : <input type="submit" value="Send Message"/>}
           </Message>
         </Form>
@@ -74,13 +76,14 @@ const Background = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100vw;
   height: 100vh;
   position: relative;
   @media screen and (max-width: 1280px) {
-    height: 100%;
+    height: 100vh;
   }
   @media screen and (max-width: 768px) {
-    height: 100%;
+    height: 100vh;
   }
   @media screen and (max-width: 414px) {
     height: 100%;

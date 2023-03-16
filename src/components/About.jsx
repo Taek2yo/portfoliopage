@@ -18,7 +18,7 @@ function About() {
             <img src={me} alt=''/>
           </Img>
           <My>
-          "28살 신입 프론트 개발자"
+          " 신입 프론트 개발자 강민택 "
           </My>
           <ContentWrap>
             <Content>
@@ -60,6 +60,7 @@ const Background = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100vw;
   height: 100vh;
   position: relative;
   @media screen and (max-width: 1280px) {
