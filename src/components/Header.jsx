@@ -52,8 +52,12 @@ const Title = styled.div`
 `
 
 const Menu = styled.div`
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
+  @media screen and (max-width: 760px){
+    width: 28px;
+    height: 28px;
+    }
   background-image:url(${menu});
   background-size: cover;
   background-repeat: no-repeat;
