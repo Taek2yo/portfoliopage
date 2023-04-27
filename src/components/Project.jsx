@@ -32,7 +32,7 @@ function Project() {
       mypart: "게시판 CRUD , 1:1 채팅기능 구현, 검색 기능 구현, PWA 적용",
       stacks: "React, Redux, axios, JavaScript, AWS",
       github: "https://github.com/Taek2yo/On-purple",
-      url: "https://on-purple.com/",
+      url: "",
     },
     {
       img: `${portfolio}`,

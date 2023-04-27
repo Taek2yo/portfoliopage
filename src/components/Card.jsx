@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import github from "../assets/img/github.png";
+import githubLogo from "../assets/img/github.png";
 import home from "../assets/img/home.png"
 function Card(item) {
   const content = item.item;
-  const url = content.github;
-  const page = content.url;
+  const github = content.github;
+  const url = content.url;
   return (
     <Container>
       <Box>
@@ -21,8 +21,8 @@ function Card(item) {
         <Stacks> ✔ 기술 스택 <br/> {content.stacks}</Stacks>
       </Box>
       <Icon>
-        <img src={github} onClick={()=>{window.open(url)}} alt="" />
-        <img src={home}  onClick={()=>{window.open(page)}} alt="" />
+        <img src={githubLogo} onClick={()=>{window.open(github)}} alt="" />
+        <img src={home}  onClick={()=>{window.open(url)}} alt="" />
       </Icon>
     </Container>
   );
