@@ -9,6 +9,7 @@ import notion from "../assets/img/notion.png"
 function Sidebar({isOpen, toggleMenu}){
     const url1 ='https://github.com/Taek2yo'
     const url2 = 'https://velog.io/@taek2yo'
+    const url3 = 'https://road-bait-7c7.notion.site/df2849ffac70487e840d5078fe20447e'
     const navigate = useNavigate();
     const [animate, setAnimate] = useState(false);
     const [localVisible, setLocalVisible] = useState(isOpen);
@@ -38,7 +39,7 @@ function Sidebar({isOpen, toggleMenu}){
                 <Icon>
                     <img src={github} alt="asdasdasd" onClick={()=>{window.open(url1)}}/>
                     <img src={velog} alt="" onClick={()=>{window.open(url2)}}/>
-                    <img src={notion} alt="" /* onClick={()=>{window.open(url3)}} *//>
+                    <img src={notion} alt="" onClick={()=>{window.open(url3)}}/>
                 </Icon>
                 <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
             </div>

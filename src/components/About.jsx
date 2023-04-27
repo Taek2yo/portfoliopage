@@ -6,9 +6,12 @@ import me from "../assets/img/me.jpg";
 import velog from "../assets/img/velog.png"
 import github from "../assets/img/github.png"
 import notion from "../assets/img/notion.png"
+import { useNavigate } from "react-router";
 function About() {
   const url1 ='https://github.com/Taek2yo'
   const url2 = 'https://velog.io/@taek2yo'
+  const url3 = 'https://road-bait-7c7.notion.site/df2849ffac70487e840d5078fe20447e'
+  const navigate = useNavigate();
   return (
     <>
       <Background> 
@@ -18,7 +21,7 @@ function About() {
             <img src={me} alt=''/>
           </Img>
           <My>
-          " 신입 프론트 개발자 강민택 "
+          " 프론트 개발자 강민택 "
           </My>
           <ContentWrap>
             <Content>
@@ -38,12 +41,15 @@ function About() {
               개인 블로그와 깃허브를 이용하여 배운 지식을 후에 활용하거나 다른 사람들과 함께 공유하고자 합니다. 
               </Desc>              
             </Content2>
-            <Icon>
+          </ContentWrap>
+          <Btn onClick={()=>{navigate('/project')}}>
+            Going to see my project
+          </Btn>
+          <Icon>
                     <img src={github} alt="" onClick={()=>{window.open(url1)}}/>
                     <img src={velog} alt="" onClick={()=>{window.open(url2)}}/>
-                    <img src={notion} alt="" /* onClick={()=>{window.open(url3)}} *//>
-              </Icon>
-          </ContentWrap>
+                    <img src={notion} alt="" onClick={()=>{window.open(url3)}}/>
+          </Icon>
         </Container>
         <Copy>© 2023. KANG MIN TAEK. <br/>ALL RIGHTS RESERVED.</Copy>
       </Background>
@@ -150,6 +156,7 @@ const ContentWrap = styled.div`
   margin-top: 30px;
   width: 75%;
   flex-direction: column;
+  
   .separator {
     height: 2px;
     width: 60px;
@@ -157,6 +164,23 @@ const ContentWrap = styled.div`
     margin: 20px auto;
   }
 `;
+
+const Btn = styled.div`
+  margin-top: 20px;
+  background-color: black;
+  font-family: var(--font-googleTiltNeon);
+  border-radius: 18px;
+  width: 8rem;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  :hover{
+    background-color: gray;
+  }
+`
 
 const Icon = styled.div`
     display: flex;
