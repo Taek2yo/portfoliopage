@@ -4,7 +4,6 @@ import Header from "./Header";
 import bg2 from "../assets/img/bg2.jpg";
 import purple from "../assets/img/onPurple.jpg";
 import portfolio from "../assets/img/portfolio.png";
-import zoom from "../assets/img/zoom-logo.png";
 import next from "../assets/img/next.png"
 import prev from "../assets/img/prev.png"
 import Card from "./Card";
@@ -19,7 +18,7 @@ function Project() {
   
   const toNext = () => {
     slideX > -1290 && setSlideX(slideX - 430);
-    if ( slideX === -860) setSlideX(0)
+    if ( slideX === -430) setSlideX(0)
   };
   
   // data
@@ -43,17 +42,6 @@ function Project() {
       desc: "React를 사용하여 개발하고, 반응형 웹, SEO 학습 및 적용, 개인 PR을 위해 개발한 웹사이트 입니다. 라이브러리 사용을 최소한으로 줄여보았습니다.",
       mypart: "1인 개발",
       stacks: "React, JavaScript, Vercel",
-      github: "https://github.com/Taek2yo/portfoliopage",
-      url: "",
-    },
-    {
-      img: `${zoom}`,
-      title: "줌(Zoom) 클론 코딩",
-      subtitle: "Websocket, 학습을 위한 줌(Zoom) 클론 코딩",
-      duration: "2023.03.10 ~ ",
-      desc: "팀 프로젝트때 사용한 Websocket, Socket.io 학습이 부족하다고 느껴 다시 학습하고자 클론 코딩을 해보았습니다. 노마드 코더의 강의를 들으며 진행했지만, 코드를 따라 치는게 아닌 제 생각을 적용해보려고 노력하였습니다.",
-      mypart: "클론 코딩",
-      stacks: "JavaScript",
       github: "https://github.com/Taek2yo/portfoliopage",
       url: "",
     }
