@@ -2,8 +2,8 @@
 ### Duration ( 2023.01.24 ~ 진행중 ) 
 #### 2023.05.02 배포 완료
 
-## Page Link
-[Link](https://mintaek-portfolio.vercel.app/)
+### Page Link
+## [Link](https://mintaek-portfolio.vercel.app/)
 
 ### Main Page
 ![Mainpage](https://user-images.githubusercontent.com/110080748/235656468-5935ecc4-b523-44b4-a196-5003d6a38fb3.PNG)
