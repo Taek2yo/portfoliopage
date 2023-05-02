@@ -1,5 +1,5 @@
 # Taek`s Portfolio Page.
-### Duration ( 2023.01.24 ~ 진행중 ) 
+### Duration ( 2023.01.24 ~ ) 
 #### 2023.05.02 배포 완료
 
 ### Page Link
