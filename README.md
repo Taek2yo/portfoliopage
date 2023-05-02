@@ -2,6 +2,9 @@
 ### Duration ( 2023.01.24 ~ 진행중 ) 
 #### 2023.05.02 배포 완료
 
+### Main Page
+![Mainpage](https://user-images.githubusercontent.com/110080748/235656468-5935ecc4-b523-44b4-a196-5003d6a38fb3.PNG)
+
 ### Purpose 
 반응형 웹 및 css-in-js 학습, 그리고 자기PR을 위한 포트폴리오 웹 사이트
 
