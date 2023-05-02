@@ -59,7 +59,7 @@ function Contact() {
           <Message>
           <label>Message ({message.length}/500)</label>
           <textarea name="message" onChange={onChangeMessage} value={message} maxLength="500"/>
-          {name === "" || number === "" || mail === "" || message === "" ? <button type="button">빈칸을</button> : <input type="submit" value="Send Message"/>}
+          {name === "" || number === "" || mail === "" || message === "" ? <button type="button">Please Fill in the blank</button> : <input type="submit" value="Send Message"/>}
           </Message>
         </Form>
       </Container>
