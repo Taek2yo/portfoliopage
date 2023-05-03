@@ -4,7 +4,7 @@ import Header from "./Header";
 import bg from "../assets/img/bg3.jpg";
 import FE from "../assets/img/FE.png"
 import vc from "../assets/img/versioncontrol.png"
-import deployment from "../assets/img/aws.png"
+import deployment from "../assets/img/deployment.png"
 import communication from "../assets/img/communication.png"
 function Skills() {
   return (
