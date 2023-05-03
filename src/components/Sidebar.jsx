@@ -115,7 +115,7 @@ const Wrapper = styled.div`
 `
 
 const Menu = styled.div`
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-family: var(--font-googleTiltNeon);
     font-weight: 700;
     line-height: 1.1;

@@ -108,10 +108,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 62%;
   margin: auto;
   padding-top: 120px;
   @media screen and (max-width: 768px) {

@@ -62,7 +62,6 @@ export default About;
 const Background = styled.div`
   font-family: var(--font-googleNotoSerifKR);
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(124, 118, 118, 0.151)),url(${bg3});
-  background-size: 100% 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -70,10 +69,10 @@ const Background = styled.div`
   height: 100vh;
   position: relative;
   @media screen and (max-width: 1280px) {
-    height: 100%;
+    height: 100vh;
   }
   @media screen and (max-width: 768px) {
-    height: 100%;
+    height: 100vh;
   }
 `;
 
@@ -96,7 +95,7 @@ const ContentTitle = styled.div`
 
 
 const Desc = styled.div`
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   span{
     font-weight: bold;
   }

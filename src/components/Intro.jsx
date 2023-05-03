@@ -90,7 +90,7 @@ const cursor = keyframes`
 
 const Greet = styled.pre`
   color: white;
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   font-weight: bold;
   height: 12vh;
   @media screen and (max-width: 375px){
