@@ -52,7 +52,7 @@ const Box = styled.div`
   background-color: whitesmoke;
   border-radius: 12px;
   width: 400px;
-  height: 100%;
+  height: 95%;
   box-shadow: 2px 3px 3px 3px;
   cursor: pointer;
 

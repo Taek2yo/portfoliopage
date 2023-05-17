@@ -133,15 +133,18 @@ const Title = styled.div`
 `;
 
 const Row = styled.div`
-  width: 67vw;
-  height: 77vh;
-  overflow-x: hidden;
+  width: 100%;
+  height: 80vh;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 `;
 
 const Wrap = styled.div`
   display: flex;
   gap: 30px;
-  margin-top: 25px;
   float: left;
   margin-left: 10px;
   justify-content: center;
