@@ -38,7 +38,7 @@ function Project() {
       img: `${portfolio}`,
       title: "개인 포트폴리오",
       subtitle: "프론트엔드 개발자 포트폴리오 사이트",
-      duration: "2023.01.24 ~",
+      duration: "2023.01.24 ~ 2023.05.02 ( 리뉴얼 예정 )",
       desc: "React를 사용하여 개발하고, 반응형 웹, SEO 학습 및 적용, 개인 PR을 위해 개발한 웹사이트 입니다. 라이브러리 사용을 최소한으로 줄여보았습니다.",
       mypart: "1인 개발",
       stacks: "React, JavaScript, Vercel",
