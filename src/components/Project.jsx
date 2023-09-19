@@ -4,6 +4,7 @@ import Header from "./Header";
 import bg2 from "../assets/img/bg2.jpg";
 import purple from "../assets/img/onPurple.jpg";
 import portfolio from "../assets/img/portfolio.png";
+import baemin from "../assets/img/baemin.jpg"
 import next from "../assets/img/next.png"
 import prev from "../assets/img/prev.png"
 import Card from "./Card";
@@ -38,12 +39,23 @@ function Project() {
       img: `${portfolio}`,
       title: "개인 포트폴리오",
       subtitle: "프론트엔드 개발자 포트폴리오 사이트",
-      duration: "2023.01.24 ~ 2023.05.02 ( 리뉴얼 예정 )",
+      duration: "2023.01.24 ~ 2023.05.02",
       desc: "React를 사용하여 개발하고, 반응형 웹, SEO 학습 및 적용, 개인 PR을 위해 개발한 웹사이트 입니다. 라이브러리 사용을 최소한으로 줄여보았습니다.",
       mypart: "1인 개발",
       stacks: "React, JavaScript, Vercel",
       github: "https://github.com/Taek2yo/portfoliopage",
       url: "",
+    },
+    {
+      img: `${baemin}`,
+      title: "배달의 민족 클론 코딩",
+      subtitle: "배달의 민족 클론 코딩",
+      duration: "2023-06-04 ~ 2023-08-31",
+      desc: "Next.js 학습과 DB에 대한 이해를 위해, 기획보단 클론 코딩이 다양한 기능을 학습할 수 있다고 판단하여 진행하였습니다. 배달의 민족의 UI 구성을 배우고 활용함으로써 실력 향상을 기대하기 위해서 진행",
+      mypart: "1인 개발",
+      stacks: "Next.js, React, JavaScript, MongoDB, AWS S3, Open API",
+      github: "https://github.com/Taek2yo/baemin-web",
+      url: "https://baemin-web.vercel.app/",
     }
   ];
 
