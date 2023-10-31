@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Header from "./Header";
-import bg2 from "../assets/img/bg2.jpg";
+import bg from "../assets/img/bg2.jpg";
 import purple from "../assets/img/onPurple.jpg";
 import portfolio from "../assets/img/portfolio.png";
 import baemin from "../assets/img/baemin.jpg"
@@ -19,7 +19,7 @@ function Project() {
   
   const toNext = () => {
     slideX > -1290 && setSlideX(slideX - 430);
-    if ( slideX === -430) setSlideX(0)
+    if (slideX === -430) setSlideX(0);
   };
   
   // data
@@ -51,7 +51,7 @@ function Project() {
       title: "배달의 민족 클론 코딩",
       subtitle: "배달의 민족 클론 코딩",
       duration: "2023-06-04 ~ 2023-08-31",
-      desc: "Next.js 학습과 DB에 대한 이해를 위해, 기획보단 클론 코딩이 다양한 기능을 학습할 수 있다고 판단하여 진행하였습니다. 배달의 민족의 UI 구성을 배우고 활용함으로써 실력 향상을 기대하기 위해서 진행",
+      desc: "Next.js 학습과 데이터베이스 이해를 위해 기획보다는 다양한 기능을 학습할 수 있는 클론 코딩 프로젝트를 선택했습니다. 이를 통해 대용량 트래픽이 발생하는 기업의 UI 구성 및 기능을 학습하고 활용함으로써 실력 향상을 기대하여 이 프로젝트를 진행했습니다.",
       mypart: "1인 개발",
       stacks: "Next.js, React, JavaScript, MongoDB, AWS S3, Open API",
       github: "https://github.com/Taek2yo/baemin-web",
@@ -60,52 +60,56 @@ function Project() {
   ];
 
   return (
+    <>
     <Background>
       <Header />
       <Container className="container">
         <Title>MY PROJECT</Title>
 
-      <SlideWrapper>
-        <PrevBtn onClick={()=>{toPrev()}}></PrevBtn>
-        <Row>
-          <Wrap style={{ transform : `translateX(${slideX}px)`}}>
-            {projects.map((item) => (
-              <Card item={item} key={item.title} />
-            ))}
-          </Wrap>
-        </Row>
-        <NextBtn onClick={()=>{toNext()}}></NextBtn>
-      </SlideWrapper>
-
+        <SlideWrapper>
+          <PrevBtn onClick={toPrev}></PrevBtn>
+          <Row>
+            <Wrap style={{ transform: `translateX(${slideX}px)` }}>
+              {projects.map((item) => (
+                <Card item={item} key={item.title} />
+              ))}
+            </Wrap>
+          </Row>
+          <NextBtn onClick={toNext}></NextBtn>
+        </SlideWrapper>
       </Container>
       <Copy>
         © 2023. KANG MIN TAEK. <br />
         ALL RIGHTS RESERVED.
       </Copy>
     </Background>
+    </>
   );
 }
 
 export default Project;
 
 const Background = styled.div`
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(124, 118, 118, 0.151)),
+    url(${bg});
+  background-size: 100% 100%;
   font-family: var(--font-googleNotoSerifKR);
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0),
-      rgba(124, 118, 118, 0.151)
-    ),
-    url(${bg2});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
+
   @media screen and (max-width: 1200px) {
     height: 100vh;
   }
   @media screen and (max-width: 768px) {
     height: 100vh;
   }
+  @media screen and (max-width: 320px) {
+    height: 100vh;
+  }
 `;
+
 
 const Container = styled.div`
   display: flex;
@@ -151,7 +155,13 @@ const Row = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  @media (max-width: 1200px) {
+    width: 420px;
+    overflow-x: hidden;
+  }
+  @media (max-width: 768px) {
+    overflow-x: hidden;
+  }
 `;
 
 const Wrap = styled.div`
@@ -159,8 +169,15 @@ const Wrap = styled.div`
   gap: 30px;
   float: left;
   margin-left: 10px;
-  justify-content: center;
   transition: 0.5s;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+    margin-left: 0;
+    align-items: center;
+  }
 `;
 
 const Button = styled.button`
