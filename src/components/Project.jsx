@@ -10,18 +10,6 @@ import prev from "../assets/img/prev.png"
 import Card from "./Card";
 
 function Project() {
-  // slide
-  const [slideX, setSlideX] = useState(0);
-  
-  const toPrev = () => {
-    slideX < 0 && setSlideX(slideX + 430);
-  };
-  
-  const toNext = () => {
-    slideX > -1290 && setSlideX(slideX - 430);
-    if (slideX === -430) setSlideX(0);
-  };
-  
   // data
   const projects = [
     {
@@ -58,6 +46,30 @@ function Project() {
       url: "https://baemin-web.vercel.app/",
     }
   ];
+  
+  // slide
+  const [slideX, setSlideX] = useState(0);
+  const itemWidth = 430; // 각 항목의 너비
+  const totalItems = projects.length;
+
+  const toPrev = () => {
+    if (slideX === 0) {
+      // 처음 항목에서 이전을 누르면 마지막 항목으로 이동
+      setSlideX(-itemWidth * (totalItems - 1));
+    } else {
+      setSlideX(slideX + itemWidth);
+    }
+  };
+
+  const toNext = () => {
+    if (slideX === -itemWidth * (totalItems - 1)) {
+      // 마지막 항목에서 다음을 누르면 처음 항목으로 이동
+      setSlideX(0);
+    } else {
+      setSlideX(slideX - itemWidth);
+    }
+  };
+  
 
   return (
     <>
